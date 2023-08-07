@@ -6,125 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Integrador</title>
     <script src="https://kit.fontawesome.com/2d353964a9.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/stayle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Public/stylesheets/stayle.css" />
 </head>
 
-<body>
+<body class="body">
 
-    <header>
+    <header class="header">
+        <section class="header__section--img">
+            <img class="header__section--img-perfil" src="./Public/images/Img_perfil.jfif" alt="Imagen Perfil" />
+        </section>
+        <section class="header__section">
+            <div class="header__section__div--info">
+                <article class="header__section__article--Name">
+                    <h1 class="header__section__article--Name-titulo">Nombre</h1>
+                    <p class="header__section__article--Name-nombre">Front-end developer</p>
+                </article>
 
-    </header>
+                <article class="header__section__article--Contacto">
+                    <i class="fa-solid fa-envelope header__section__article--carta"></i><span>
+                        ejemplo@mail.com</span><br>
+                    <i class="fa-solid fa-phone header__section__article--tel"></i><span> +54 9 11-1234-5678</span>
+                </article>
+            </div>
 
-    <main>
-        <section>
-            <img src="./Public/images/Img_perfil.png" alt="Imagen Perfil" />
-            <article>
-                <h2>Nombre</h2>
-                <p>Front-end developer</p>
-            </article>
-
-            <article>
-                <i class="fa-solid fa-envelope"></i><span> ejemplo@mail.com</span><br>
-                <i class="fa-solid fa-phone"></i><span> +54 9 11-1234-5678</span>
-            </article>
-
-            <article>
+            <article class="header__section__article--Presentacion">
                 <p>
                     Self-motivated developer, who is willing to learn and create
                     outstanding UI applications.
                 </p>
             </article>
         </section>
+    </header>
 
-        <section>
-            <h2>Skills</h2>
-            <article>
-                <p>HTLM</p>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
-                    aria-valuemax="100">
-                    <div class="progress-bar" style="width: 90%"></div>
-                </div>
+    <main class="main">
+        <section class="section--skills">
+            <h2 class="section--skills-titulo">Skills</h2>
+            <article class="section__article--html">
+                <label class="section__article--html--subhtml"><span>HTLM</span></label>
+                <progress class="section__article--html--progress" max="100" value="90">90%</progress>
             </article>
-            <article>
-                <p>CSS</p>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
-                    aria-valuemax="100">
-                    <div class="progress-bar" style="width: 80%"></div>
-                </div>
+            <article class="section__article--css">
+                <label class="section__article--css-subcss"><span>CSS</span></label>
+                <progress class="section__article--html--progress" max="100" value="80">80%</progress>
             </article>
-            <article>
-                <p>JS</p>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
-                    aria-valuemax="100">
-                    <div class="progress-bar" style="width: 90%"></div>
+            <article class="section__article--js">
+                <label class="section__article--js-subjs"><span>JS</span></label>
+                <progress class="section__article--html--progress" max="100" value="90">80%</progress>
             </article>
-            <article>
-                <p>React</p>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
-                    aria-valuemax="100">
-                    <div class="progress-bar" style="width: 80%"></div>
+            <article class="section__article--react">
+                <label class="section__article--react-subreact">React</label>
+                <progress class="section__article--html--progress" max="100" value="80">80%</progress>
             </article>
         </section>
 
-        <section>
-            <h2>Proyecto(3)</h2>
-            <article>
-                <button type="button" class="btn btn-primary">Responsivo</button>
-                <button type="button" class="btn btn-outline-light">JavaScript</button>
-                <button type="button" class="btn btn-outline-light">React</button>
+        <section class="section--proyect">
+            <h2 class="section--proyect-titulo">Proyecto(3)</h2>
+            <article class="section__article-bootoms">
+                <button type="button" class="section__article__button-resp">Responsivo</button>
+                <button type="button" class="section__article__button-js">JavaScript</button>
+                <button type="button" class="section__article__button-react">React</button>
             </article>
         </section>
 
-        <section>
-            <div class="card" style="width: 18rem;">
-                <img src="/Public/images/Img_proyecto.png" class="card-img-top" alt="Proyecto">
-                <div class="card-body">
-                    <div>
-                        <p>#HTML #CSS #responsive</p>
-                        <h5 class="card-title">Título</h5>
-                    </div>
-                    <p class="card-text">In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.</p>
-                    <a href="#" class="btn btn-primary">Demo</a>
-                    <button type="button" class="btn btn-outline-info">Code</button>
+        <section class="section--card">
+            <img class="section__article--card-img" src="/Public/images/Img_proyecto.png" alt="Proyecto">
+            <article class="section__article--card">
+                <div class="section__article--card-conteinertitulo">
+                    <small class="section__article--card-hastag">#HTML #CSS #responsive</small>
+                    <h5 class="section__article--card-titulo">Título</h5>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Experiencia</h2>
-            <article>
-                <div>
-                    <img src="/Public/images/Img_adidas.png" alt="Img Experiencia">
-                    <p>Feb 2022 - Actualidad</p>
-                    <p>Front-end Developer</p>
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Eget nulla eu cursus cursus pretium eu. Eget vestibulum quam aliquet.</p>
+                <p class="section__article--card-text">In this project, I work with HTML and CSS to create a responsive
+                    page . The
+                    design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id.
+                    Quisque feugiat malesuada molestie.</p>
+                <div class="section__article--card-botons">
+                    <a class="section__article--card-demo" href="#">Demo</a>
+                    <button class="section__article--card-code" type="button">Code</button>
                 </div>
             </article>
         </section>
 
-        <section>
-            <h2>Certificados</h2>
-            <div class="card" style="width: 18rem;">
-                <img src="/Public/images/Img_diploma.png" class="card-img-top" alt="Diploma">
-                <div class="card-body">
-                  <p class="card-text">Front-end Developer</p>
-                  <small>Feb 2020 - Feb 2021</small>
+        <section class="section--experiens">
+            <h2 class="section--experiens-titulo">Experiencia</h2>
+            <article class="section__article--experiens">
+                <div class="section__article__div--experiens">
+                    <img class="section__article__div--experiens-img" src="/Public/images/Img_adidas.png"
+                        alt="Img Experiencia">
+                    <span class="section__article__div--experiens-textcontainer">
+                        <p class="section__article__div--experiens-fecha">Feb 2022 - Actualidad</p>
+                        <p class="section__article__div--experiens-name">Front-end Developer</p>
+                    </span>
                 </div>
-              </div>
+                <div class="section__article--description">
+                    <p class="section__article--description-texto">Lorem ipsum dolor sit amet consectetur. Eget nulla eu
+                        cursus cursus pretium eu. Eget vestibulum
+                        quam aliquet.</p>
+                </div>
+            </article>
         </section>
     </main>
-
-    <footer>
-
+    <footer class="footer">
+        <h2 class="footer-titulo">Certificados</h2>
+        <section class="footer__section"> 
+            <article class="footer__section__article-imgconteiner">
+                <img class="footer__section__article-img" src="/Public/images/Img_diploma.jfif" class="card-img-top" alt="Diploma">
+            </article>
+            <div class="footer__div-conteiner">
+                <p class="footer__div-titulo">Front-end Developer</p>
+                <small class="footer__div-fecha">Feb 2020 - Feb 2021</small>
+            </div>
+        </section>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

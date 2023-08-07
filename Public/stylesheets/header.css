@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: var(--BorderRadius);
+}
+
+.header__section--img {
+    width: 350px;
+    height: 340px;
+    border-radius: var(--BorderRadius);
+    overflow: hidden;
+}
+
+.header__section--img-perfil {
+    bottom: 42px;
+    position: relative;
+    right: 15px;
+}
+
+.header__section {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.header__section__div--info {
+    display: flex;
+    width: 268px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.header__section__article--Name {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.header__section__article--Name-titulo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header__section__article--Name-nombre {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--GrisColor);
+}
+
+.header__section__article--Contacto {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header__section__article--carta,
+.header__section__article--tel{
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.header__section__article--Presentacion{
+    font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: var(--GrisColor);
+}

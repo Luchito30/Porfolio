@@ -1,0 +1,38 @@
+.section--skills {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: var(--BorderRadius);
+    background-color: #fff;
+}
+
+.section--skills-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--GrisOscuro);
+}
+
+.section__article--html,
+.section__article--css,
+.section__article--js,
+.section__article--react {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.section__article--html--subhtml,
+.section__article--css-subcss,
+.section__article--js-subjs,
+.section__article--react-subreact {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--GrisColor);
+}
+
+.section__article--html--progress {
+    width: 250px;
+    height: 20px;
+}

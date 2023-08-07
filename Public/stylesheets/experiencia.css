@@ -1,0 +1,68 @@
+.section--experiens {
+    display: flex;
+    height: 329px;
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #FFF;
+    border-radius: var(--BorderRadius);
+}
+
+.section--experiens-titulo {
+    font-size: 24px;
+    color: var(--GrisOscuro);
+    font-weight: 600;
+}
+
+.section__article--experiens {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: var(--BorderRadius);
+    width: 462px;
+    margin: 0 auto;
+    border: 1px solid var(--GrisClaro);
+}
+
+.section__article__div--experiens {
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;
+}
+
+.section__article__div--experiens-img {
+    width: 55px;
+    height: 36.837px;
+}
+
+.section__article__div--experiens-textcontainer {
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.section__article__div--experiens-fecha {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--GrisColor);
+
+}
+
+.section__article__div--experiens-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.section__article--description {
+    height: 136px;
+    flex: 1 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--GrisColor);
+}
