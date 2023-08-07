@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-body{
-    color: #000;
-    font-family: var(--FrontFamily);
-}
-
 .body{
     display: inline-flex;
     padding: 16px;
@@ -16,10 +11,20 @@ body{
     align-items: center;
     gap: 24px;
     background-color: var(--BlancoOpaco);
+    color: #000;
+    font-family: var(--FrontFamily);
 }
 
 .main{
     display: inline-flex;
     flex-direction: column;
     gap: 24px;
+    width: 462px;
+}
+
+@media (min-width:496px){
+    .body{
+        display: flex;
+        margin: 0 auto;
+    }
 }

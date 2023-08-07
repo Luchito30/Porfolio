@@ -5,7 +5,7 @@
     gap: 16px;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
-    width: 100%;
+    width: 462px;
 }
 
 .footer-titulo {
@@ -21,7 +21,7 @@
 }
 
 .footer__section__article-imgconteiner {
-    width: 462px;
+    width: 430px;
     border: 1px solid var(--GrisClaro);
     border-radius: var(--BorderRadius);
     margin: 0 auto;

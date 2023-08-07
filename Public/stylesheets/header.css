@@ -6,6 +6,7 @@
     align-items: center;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
+    width: 462px;
 }
 
 .header__section--img {
@@ -69,6 +70,8 @@
 .header__section__article--tel{
     margin-left: 10px;
     margin-right: 8px;
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .header__section__article--Presentacion{
@@ -77,4 +80,8 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 color: var(--GrisColor);
+}
+
+@media (min-width: 1200px){
+   
 }

@@ -20,7 +20,7 @@
     align-items: center;
     flex: 1 0 0;
     border-radius: var(--BorderRadius);
-    width: 462px;
+    width: 398px;
     margin: 0 auto;
     border: 1px solid var(--GrisClaro);
 }
