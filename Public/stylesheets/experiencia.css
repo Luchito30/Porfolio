@@ -1,68 +1,102 @@
 .section--experiens {
     display: flex;
-    height: 329px;
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
 }
 
 .section--experiens-titulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--GrisOscuro);
     font-weight: 600;
 }
 
-.section__article--experiens {
+.section__article--experiens,
+.section__article--experiens2,
+.section__article--experiens3 {
     display: flex;
-    padding: 8px;
+    padding: 0.5rem;
     align-items: center;
     flex: 1 0 0;
     border-radius: var(--BorderRadius);
-    width: 398px;
+    width: 24.875rem;
     margin: 0 auto;
     border: 1px solid var(--GrisClaro);
 }
 
+.section__article--experiens2,
+.section__article--experiens3 {
+    display: none;
+}
+
 .section__article__div--experiens {
     display: flex;
-    padding: 4px;
+    padding: 0.25rem;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 0.375rem;
     flex: 1 0 0;
 }
 
 .section__article__div--experiens-img {
-    width: 55px;
-    height: 36.837px;
+    width: 3.4375rem;
+    height: 2.30231rem;
 }
 
 .section__article__div--experiens-textcontainer {
     display: flex;
-    padding: 4px;
+    padding: 0.25rem;
     flex-direction: column;
-    gap: 6px;
+    gap: 0.375rem;
 }
 
 .section__article__div--experiens-fecha {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--GrisColor);
 
 }
 
 .section__article__div--experiens-name {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: #000;
 }
 
 .section__article--description {
-    height: 136px;
+    height: 8.5rem;
     flex: 1 0 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--GrisColor);
+}
+
+
+@media (min-width:75rem) {
+    .section--experiens{
+        padding: 1.5rem 1rem;
+        grid-area: experiencia;
+        width: 34.9375rem;
+        height: 45.1875rem;
+    }
+
+    .section__article--experiens,
+    .section__article--experiens2,
+    .section__article--experiens3 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+    }
+
+    .section__article__div--experiens {
+        flex-direction: row;
+        padding: 0.25rem;
+        gap: 0.375rem;
+    }
+
+    .section__article--description{
+        width: 16.3125rem;
+    }
 }

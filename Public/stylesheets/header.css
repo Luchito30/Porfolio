@@ -1,87 +1,88 @@
 .header {
     display: flex;
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
-    width: 462px;
+    width: 28.875rem;
 }
 
 .header__section--img {
-    width: 350px;
-    height: 340px;
+    width: 21.875rem;
+    height: 21.25rem;
     border-radius: var(--BorderRadius);
     overflow: hidden;
 }
 
 .header__section--img-perfil {
-    bottom: 42px;
+    bottom: 2.625rem;
     position: relative;
-    right: 15px;
+    right: 0.9375rem;
 }
 
 .header__section {
     display: flex;
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 1.5rem;
     flex: 1 0 0;
     align-self: stretch;
 }
 
 .header__section__div--info {
     display: flex;
-    width: 268px;
+    width: 16.75rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .header__section__article--Name {
     display: flex;
-    padding: 8px;
+    padding: 0.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .header__section__article--Name-titulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .header__section__article--Name-nombre {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
 .header__section__article--Contacto {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 
 .header__section__article--carta,
 .header__section__article--tel{
-    margin-left: 10px;
-    margin-right: 8px;
-    font-size: 18px;
+    margin-left: 0.625rem;
+    margin-right: 0.5rem;
+    font-size: 1.125rem;
     font-weight: 900;
 }
 
 .header__section__article--Presentacion{
-    font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: var(--GrisColor);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--GrisColor);
 }
 
-@media (min-width: 1200px){
-   
+@media (min-width: 75rem){
+    .header{
+        width: 34.9375rem ;
+        height: 41.375rem;
+    }
 }

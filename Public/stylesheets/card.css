@@ -1,15 +1,24 @@
-.section--card {
+.section--card,
+.section--card2,
+.section--card3,
+.section--card4 {
     display: flex;
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
 }
 
-.section__article--card-img {
-    width: 430px;
-    height: 298.5px;
+.section--card2,
+.section--card3,
+.section--card4 {
+    display: none;
+}
+
+.section--card-img {
+    width: 26.875rem;
+    height: 18.65625rem;
     overflow: hidden;
     border-radius: var(--BorderRadius);
     object-fit: cover;
@@ -17,59 +26,89 @@
     display: block;
 }
 
-.section__article--card {
+.section__article--container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .section__article--card-conteinertitulo {
     display: flex;
-    padding: 8px 0px;
+    padding: 0.5rem 0px;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .section__article--card-hastag {
-    width: 221px;
-    height: 19px;
-    font-size: 16px;
+    width: 13.8125rem;
+    height: 1.1875rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .section__article--card-titulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .section__article--card-text {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
 .section__article--card-botons {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .section__article--card-demo,
 .section__article--card-code {
     display: flex;
-    padding: 12px 40px;
+    padding: 0.75rem 2.5rem;
     justify-content: center;
     align-items: center;
     border-radius: var(--BorderRadius);
     background-color: var(--CelesteColor);
     text-decoration: none;
     color: #FFF;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
-    width: 135px;
+    width: 8.4375rem;
 }
 
 .section__article--card-code {
     background-color: #FFF;
     color: var(--CelesteColor);
     border: 1px solid var(--CelesteColor);
+}
+
+@media (min-width:75rem) {
+    .card--container {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        flex-direction: column;
+        height: 66.4375rem;
+        width: 54.6875rem;
+        overflow-y: scroll;
+        scrollbar-color: yellow #800080;
+        grid-area: card;
+    }
+
+    .section--card,
+    .section--card2,
+    .section--card3,
+    .section--card4 {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        padding: 1rem;
+        width: 52.8125rem;
+    }
+
+    .section--card-img {
+        overflow: revert;
+
+    }
 }

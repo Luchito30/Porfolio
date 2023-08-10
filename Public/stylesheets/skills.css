@@ -1,38 +1,74 @@
 .section--skills {
     display: flex;
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     border-radius: var(--BorderRadius);
     background-color: #fff;
 }
 
 .section--skills-titulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--GrisOscuro);
 }
 
-.section__article--html,
-.section__article--css,
-.section__article--js,
-.section__article--react {
+.section__article--skills-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__article__div--skills-container1,
+.section__article__div--skills-container2 {
+    display: flex;
+    padding: 0.5rem 0rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section__article__div--html,
+.section__article__div--css,
+.section__article__div--js,
+.section__article__div--react {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
     justify-content: space-between;
 }
 
-.section__article--html--subhtml,
-.section__article--css-subcss,
-.section__article--js-subjs,
-.section__article--react-subreact {
-    font-size: 24px;
+.section__article__div--html--subhtml,
+.section__article__div--css-subcss,
+.section__article__div--js-subjs,
+.section__article__div--react-subreact {
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--GrisColor);
 }
 
-.section__article--html--progress {
-    width: 250px;
-    height: 20px;
+.section__article__div--html--progress {
+    width: 15rem;
+    height: 0.625rem;
+    appearance: none;
+}
+
+::-webkit-progress-value {
+    background-color: var(--CelesteColor);
+}
+
+@media (min-width:75rem) {
+
+    .section--skills {
+        width: 54.0625rem;
+        grid-area: skills;
+    }
+
+    .section__article--skills-container {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0rem 1rem;
+        height: 5.125rem;
+        justify-content: space-between;
+    }
+
 }
