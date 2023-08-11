@@ -24,6 +24,7 @@
     padding: 0.5rem 0rem;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1 0 0;
 }
 
 .section__article__div--html,
@@ -32,7 +33,6 @@
 .section__article__div--react {
     display: flex;
     align-items: center;
-    gap: 1rem;
     justify-content: space-between;
 }
 

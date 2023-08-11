@@ -5,6 +5,8 @@
     gap: 2rem;
     background-color: #fff;
     border-radius: var(--BorderRadius);
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .section--proyect-titulo {
@@ -15,7 +17,6 @@
 
 .section__article-bootoms {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
 }

@@ -92,5 +92,7 @@ gap: 0.375rem;
 
     .section__article-img {
         height: 9.46706rem;
+        border: 1px solid var(--GrisClaro);
+        border-radius: var(--BorderRadius);
     }
 }

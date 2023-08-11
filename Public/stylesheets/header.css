@@ -12,14 +12,14 @@
 .header__section--img {
     width: 21.875rem;
     height: 21.25rem;
-    border-radius: var(--BorderRadius);
-    overflow: hidden;
 }
 
 .header__section--img-perfil {
-    bottom: 2.625rem;
-    position: relative;
-    right: 0.9375rem;
+    object-position: 0px -42px;
+    border-radius: var(--BorderRadius);
+    width: 21.875rem;
+    height: 21.25rem;
+    object-fit: cover;
 }
 
 .header__section {
@@ -64,14 +64,17 @@
 .header__section__article--Contacto {
     font-size: 1.125rem;
     font-weight: 600;
+    padding: 0.5rem;
+}
+
+.header__section__article--carta{
+    margin-bottom: 0.5rem;
 }
 
 .header__section__article--carta,
 .header__section__article--tel{
-    margin-left: 0.625rem;
     margin-right: 0.5rem;
     font-size: 1.125rem;
-    font-weight: 900;
 }
 
 .header__section__article--Presentacion{
@@ -84,5 +87,21 @@
     .header{
         width: 34.9375rem ;
         height: 41.375rem;
+        grid-area: perfil;
+    }
+
+    .header__section__article--Name-titulo {
+        width: 7.21381rem;
+        height: 1.53363rem;
+    }
+
+    .header__section__article--Name-nombre {
+        width: 13.29606rem;
+        height: 1.16344rem;
+    }
+
+    .header__section__article--Presentacion{
+        height: 6.36538rem;
+        align-self: stretch;
     }
 }

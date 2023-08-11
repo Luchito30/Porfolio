@@ -32,7 +32,11 @@
 @media (min-width:75rem) {
     .body {
         align-items: flex-start;
-        position: relative;
+        display: grid;
+        justify-content: flex-start;
+        padding: 1rem 2rem;
+        width: 94.5rem;
+        gap: 1.5rem;
     }
 
     .main{
@@ -46,7 +50,7 @@
             "certificado certificado";
         grid-column-gap: 1.5rem;
         grid-row-gap: 1.5rem;
-        position: absolute;
+        grid-area: main;
     }
 
 }

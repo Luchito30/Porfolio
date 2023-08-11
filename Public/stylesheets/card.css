@@ -90,10 +90,18 @@
         gap: 1.2rem;
         flex-direction: column;
         height: 66.4375rem;
-        width: 54.6875rem;
+        width: 54.0625rem;
         overflow-y: scroll;
-        scrollbar-color: yellow #800080;
         grid-area: card;
+    }
+    
+    .card--container::-webkit-scrollbar{
+        width: 10px;
+        background-color: var(--GrisClaro);
+    }
+
+    .card--container::-webkit-scrollbar-thumb{
+        background: var(--CelesteColor)
     }
 
     .section--card,
@@ -109,6 +117,11 @@
 
     .section--card-img {
         overflow: revert;
+    }
 
+    .section__article--container{
+        padding: 1rem 0rem;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }
