@@ -2,7 +2,6 @@
     display: flex;
     padding: 1rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
@@ -10,16 +9,20 @@
 }
 
 .header__section--img {
-    width: 21.875rem;
-    height: 21.25rem;
+    width: 100%;
+    height: 100%;
+    max-width: 21.875rem;
+    max-height: 21.25rem;
 }
 
 .header__section--img-perfil {
     object-position: 0px -42px;
     border-radius: var(--BorderRadius);
-    width: 21.875rem;
-    height: 21.25rem;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 21.875rem;
+    max-height: 21.25rem;
 }
 
 .header__section {
@@ -67,27 +70,28 @@
     padding: 0.5rem;
 }
 
-.header__section__article--carta{
+.header__section__article--carta {
     margin-bottom: 0.5rem;
 }
 
 .header__section__article--carta,
-.header__section__article--tel{
+.header__section__article--tel {
     margin-right: 0.5rem;
     font-size: 1.125rem;
 }
 
-.header__section__article--Presentacion{
+.header__section__article--Presentacion {
     font-size: 1.125rem;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
-@media (min-width: 75rem){
-    .header{
-        width: 34.9375rem ;
+@media (min-width: 80rem) {
+    .header {
+        width: 100%;
         height: 41.375rem;
-        grid-area: perfil;
+        max-width: 26.9375rem;
+        grid-area: 1/1;
     }
 
     .header__section__article--Name-titulo {
@@ -100,7 +104,7 @@
         height: 1.16344rem;
     }
 
-    .header__section__article--Presentacion{
+    .header__section__article--Presentacion {
         height: 6.36538rem;
         align-self: stretch;
     }

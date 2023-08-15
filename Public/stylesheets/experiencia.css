@@ -5,6 +5,7 @@
     gap: 1rem;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
+    width: 28.875rem;
 }
 
 .section--experiens-titulo {
@@ -74,13 +75,14 @@
 }
 
 
-@media (min-width:75rem) {
+@media (min-width:80rem) {
     .section--experiens{
         padding: 1rem;
         grid-area: experiencia;
-        width: 34.9375rem;
+        width: 100%;
         height: 45.1875rem;
         gap: 1rem;
+        max-width: 34.9375rem;
     }
 
     .section__article--experiens,
@@ -92,7 +94,7 @@
         align-items: center;
         gap: 0.25rem;
         flex: 1 0 0;
-        align-self: stretch;
+        max-width: 100%;
     }
 
     .section__article__div--experiens {
@@ -102,6 +104,7 @@
     }
 
     .section__article--description{
-        width: 16.3125rem;
+        width: 100%;
+        max-width: 16.3125rem;
     }
 }

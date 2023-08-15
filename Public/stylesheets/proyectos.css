@@ -7,6 +7,7 @@
     border-radius: var(--BorderRadius);
     justify-content: center;
     align-items: flex-start;
+    width: 28.875rem;
 }
 
 .section--proyect-titulo {
@@ -44,9 +45,10 @@
     border: 0px;
 }
 
-@media (min-width:75rem) {
+@media (min-width:80rem) {
     .section--proyect {
-        width: 54.0625rem;
+        width: 100%;
+        max-width: 54.0625rem;
         grid-area: proyecto;
     }
 

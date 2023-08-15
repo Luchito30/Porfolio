@@ -8,6 +8,7 @@
     gap: 0.625rem;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
+    width: 28.875rem;
 }
 
 .section--card2,
@@ -83,14 +84,15 @@
     border: 1px solid var(--CelesteColor);
 }
 
-@media (min-width:75rem) {
+@media (min-width:80rem) {
     .card--container {
         display: flex;
         align-items: flex-start;
         gap: 1.2rem;
         flex-direction: column;
         height: 66.4375rem;
-        width: 54.0625rem;
+        width: 100%;
+        max-width: 54.0625rem;
         overflow-y: scroll;
         grid-area: card;
     }
@@ -112,7 +114,8 @@
         flex-direction: row;
         gap: 3rem;
         padding: 1rem;
-        width: 52.8125rem;
+        max-width: 52.8125rem;
+        width: 100%;
     }
 
     .section--card-img {

@@ -5,52 +5,49 @@
 }
 
 .body {
-    display: inline-flex;
+    display: flex;
     padding: 1rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     background-color: var(--BlancoOpaco);
     color: #000;
+    justify-content: center;
     font-family: var(--FrontFamily);
 }
 
 .main {
-    display: inline-flex;
+    align-items: center;
     flex-direction: column;
     gap: 1.5rem;
-    width: 28.875rem;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
 }
 
-@media (min-width:31rem) {
-    .body {
-        display: flex;
-        margin: 0 auto;
-    }
-}
 
-@media (min-width:75rem) {
+@media (min-width:80rem) {
     .body {
-        align-items: flex-start;
-        display: grid;
-        justify-content: flex-start;
+        grid-auto-flow: column;
         padding: 1rem 2rem;
-        width: 94.5rem;
-        gap: 1.5rem;
+        width: 100%;
+        display: grid;
+        gap: 0;
+        grid-template-areas: "perfil resto";
+        grid-template-columns: minmax(0, auto);
     }
 
     .main{
         display: grid;
-        grid-template-columns: repeat(2, auto);
         grid-template-areas:
-            "header skills"
-            "header proyecto"
-            "header card"
+            ". skills"
+            ". proyecto"
+            ". card"
             "experiencia card"
             "certificado certificado";
         grid-column-gap: 1.5rem;
         grid-row-gap: 1.5rem;
-        grid-area: main;
+        grid-template-columns: minmax(0, auto);
+        grid-area: 1 / 1 / 6 / 4;
     }
-
 }
