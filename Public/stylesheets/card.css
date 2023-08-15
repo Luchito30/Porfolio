@@ -92,7 +92,7 @@
         flex-direction: column;
         height: 66.4375rem;
         width: 100%;
-        max-width: 54.0625rem;
+        max-width: 55.0625rem;
         overflow-y: scroll;
         grid-area: card;
     }
@@ -114,7 +114,7 @@
         flex-direction: row;
         gap: 3rem;
         padding: 1rem;
-        max-width: 52.8125rem;
+        max-width: 53.8125rem;
         width: 100%;
     }
 
