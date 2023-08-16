@@ -1,18 +1,19 @@
 .header {
     display: flex;
-    padding: 1rem;
+    padding: 16px;
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
-    width: 28.875rem;
+    width: 100%;
+    max-width: 462px;
 }
 
 .header__section--img {
     width: 100%;
     height: 100%;
-    max-width: 21.875rem;
-    max-height: 21.25rem;
+    display: flex;
+    justify-content: center;
 }
 
 .header__section--img-perfil {
@@ -21,91 +22,91 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    max-width: 21.875rem;
-    max-height: 21.25rem;
+    max-width: 350px;
+    max-height: 340px;
 }
 
 .header__section {
     display: flex;
-    padding: 1rem;
+    padding: 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 24px;
     flex: 1 0 0;
     align-self: stretch;
 }
 
 .header__section__div--info {
     display: flex;
-    width: 16.75rem;
+    width: 268px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .header__section__article--Name {
     display: flex;
-    padding: 0.5rem;
+    padding: 8px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .header__section__article--Name-titulo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .header__section__article--Name-nombre {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
 .header__section__article--Contacto {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 600;
-    padding: 0.5rem;
+    padding: 8px;
 }
 
 .header__section__article--carta {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .header__section__article--carta,
 .header__section__article--tel {
-    margin-right: 0.5rem;
-    font-size: 1.125rem;
+    margin-right: 8px;
+    font-size: 18px;
 }
 
 .header__section__article--Presentacion {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 1200px) {
     .header {
         width: 100%;
-        height: 41.375rem;
-        max-width: 26.9375rem;
+        height: 662px;
+        max-width: 559px;
         grid-area: 1/1;
     }
 
     .header__section__article--Name-titulo {
-        width: 7.21381rem;
-        height: 1.53363rem;
+        width: 115.42096px;
+        height: 24.53808px;
     }
 
     .header__section__article--Name-nombre {
-        width: 13.29606rem;
-        height: 1.16344rem;
+        width: 212.73696px;
+        height: 18.61504px;
     }
 
     .header__section__article--Presentacion {
-        height: 6.36538rem;
+        height: 101.84608px;
         align-self: stretch;
     }
 }

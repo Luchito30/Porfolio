@@ -1,15 +1,16 @@
 .section--experiens {
     display: flex;
-    padding: 1rem;
+    padding: 16px;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
-    width: 28.875rem;
+    width: 100%;
+    height: 329px;
 }
 
 .section--experiens-titulo {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: var(--GrisOscuro);
     font-weight: 600;
 }
@@ -18,11 +19,11 @@
 .section__article--experiens2,
 .section__article--experiens3 {
     display: flex;
-    padding: 0.5rem;
+    padding: 8px;
     align-items: center;
     flex: 1 0 0;
     border-radius: var(--BorderRadius);
-    width: 24.875rem;
+    width: 100%;
     margin: 0 auto;
     border: 1px solid var(--GrisClaro);
 }
@@ -34,65 +35,64 @@
 
 .section__article__div--experiens {
     display: flex;
-    padding: 0.25rem;
+    padding: 4px;
     flex-direction: column;
     align-items: center;
-    gap: 0.375rem;
+    gap: 6px;
     flex: 1 0 0;
 }
 
 .section__article__div--experiens-img {
-    width: 3.4375rem;
-    height: 2.30231rem;
+    width: 55px;
+    height: 36.8px;
 }
 
 .section__article__div--experiens-textcontainer {
     display: flex;
-    padding: 0.25rem;
+    padding: 4px;
     flex-direction: column;
-    gap: 0.375rem;
+    gap: 6px;
 }
 
 .section__article__div--experiens-fecha {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
     color: var(--GrisColor);
 
 }
 
 .section__article__div--experiens-name {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     color: #000;
 }
 
 .section__article--description {
-    height: 8.5rem;
+    height: 136px;
     flex: 1 0 0;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
 
-@media (min-width:80rem) {
+@media (min-width:1200px) {
     .section--experiens{
-        padding: 1rem;
+        padding: 16px;
         grid-area: experiencia;
         width: 100%;
-        height: 45.1875rem;
-        gap: 1rem;
-        max-width: 34.9375rem;
+        height: 723px;
+        gap: 16px;
     }
 
     .section__article--experiens,
     .section__article--experiens2,
     .section__article--experiens3 {
         display: flex;
-        padding: 0.5rem;
+        padding: 8px;
         flex-direction: column;
         align-items: center;
-        gap: 0.25rem;
+        gap: 4px;
         flex: 1 0 0;
         max-width: 100%;
     }
@@ -105,6 +105,6 @@
 
     .section__article--description{
         width: 100%;
-        max-width: 16.3125rem;
+        max-width: 261px;
     }
 }

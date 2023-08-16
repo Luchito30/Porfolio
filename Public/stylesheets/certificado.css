@@ -1,15 +1,15 @@
 .section--certificado {
     display: flex;
-    padding: 1rem;
+    padding: 16px;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     background-color: #FFF;
     border-radius: var(--BorderRadius);
-    width: 28.875rem;
+    width: 100%;
 }
 
 .section--certificado-titulo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     color: var(--GrisOscuro);
 }
@@ -19,7 +19,7 @@
 .section__article--certificado3 {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .section__article--certificado2,
@@ -28,38 +28,40 @@
 }
 
 .section__article__div-imgconteiner {
-    width: 26.875rem;
     border: 1px solid var(--GrisClaro);
     border-radius: var(--BorderRadius);
     margin: 0 auto;
-    height: 16.25rem;
+    height: 260px;
+    padding: 0 16px;
     display: flex;
     justify-content: center;
+    max-width: 462px;
+    width: 100%;
 }
 
 .section__article-img {
-    height: 16.25rem;
+    width: 100%;
 }
 
 .section__article__div-conteinertex {
     display: flex;
-padding: 0.25rem;
+padding: 4px;
 flex-direction: column;
-gap: 0.375rem;
+gap: 6px;
 }
 
 .section__article__div-titulo{
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .section__article__div-fecha{
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
     color: var(--GrisColor);
 }
 
-@media (min-width:80rem) {
+@media (min-width:1200px) {
 
     .section--certificado{
         width: 100%;
@@ -69,7 +71,7 @@ gap: 0.375rem;
     .section--containercetification{
         display: flex;
         justify-content: center;
-        gap: 3rem;
+        gap: 48px;
     }
 
     .section__article--certificado,
@@ -77,8 +79,8 @@ gap: 0.375rem;
     .section__article--certificado3 {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
+        padding: 16px;
+        gap: 16px;
         height: 15.65457rem;
         border: 1px solid var(--GrisClaro);
         border-radius: var(--BorderRadius);
@@ -91,7 +93,7 @@ gap: 0.375rem;
     }
 
     .section__article-img {
-        height: 9.46706rem;
+        height: 151.47296px;
         border: 1px solid var(--GrisClaro);
         border-radius: var(--BorderRadius);
     }
