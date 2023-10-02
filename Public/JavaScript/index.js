@@ -82,18 +82,19 @@ function plantillaExperiencia(datos) {
     datos.forEach((dato) => {
         template += `
         <div class="swiper-slide">
-            <article class="section__article--experiens">    
-                <div class="section__article__div--experiens">
-                    <img class="section__article__div--experiens-img" src="${dato.img}" alt="Img Experiencia">
-                    <span class="section__article__div--experiens-textcontainer">
-                        <p class="section__article__div--experiens-fecha">${dato.fecha}</p>
-                        <p class="section__article__div--experiens-name">${dato.titulo}</p>
-                    </span>
-                </div>
-                <div class="section__article--description">
-                    <p class="section__article--description-texto">${dato.descripcion}</p>
-                </div>
-            </article>
+        <article class="section__article--experiens">
+            <div class="section__article__div--experiens">
+                <img class="section__article__div--experiens-img" src="${dato.img}"
+                                    alt="Img Experiencia">
+                <span class="section__article__div--experiens-textcontainer">
+                    <p class="section__article__div--experiens-fecha">${dato.fecha}</p>
+                    <p class="section__article__div--experiens-name">${dato.titulo}</p>
+                </span>
+            </div>
+            <div class="section__article--description">
+                <p class="section__article--description-texto">${dato.descripcion}</p>
+            </div>
+        </article>
         </div>`;
     });
 
@@ -136,12 +137,12 @@ function plantillaCertificado(datos) {
     
     cargarYMostrarDatos(
         "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
-        ".",
+        ".slider-experiens",
         plantillaExperiencia
     );
     
     cargarYMostrarDatos(
         "https://my-json-server.typicode.com/Luchito30/Api-digitalers/certificado",
-        ".swiper-wrapper",
+        ".slider-certi",
         plantillaCertificado
     );

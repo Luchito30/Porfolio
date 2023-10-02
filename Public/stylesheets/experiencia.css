@@ -15,22 +15,20 @@
     font-weight: 600;
 }
 
-.section__article--experiens,
-.section__article--experiens2,
-.section__article--experiens3 {
+.section--experiens--container{
+    height: 500px;
+}
+
+.section__article--experiens {
     display: flex;
-    padding: 8px;
+    padding: 45px;
     align-items: center;
     flex: 1 0 0;
     border-radius: var(--BorderRadius);
     width: 100%;
+    height: 210px;
     margin: 0 auto;
     border: 1px solid var(--GrisClaro);
-}
-
-.section__article--experiens2,
-.section__article--experiens3 {
-    display: none;
 }
 
 .section__article__div--experiens {
@@ -84,9 +82,7 @@
         gap: 16px;
     }
 
-    .section__article--experiens,
-    .section__article--experiens2,
-    .section__article--experiens3 {
+    .section__article--experiens {
         display: flex;
         padding: 8px;
         flex-direction: column;
@@ -94,6 +90,7 @@
         gap: 4px;
         flex: 1 0 0;
         max-width: 100%;
+        height: unset;
     }
 
     .section__article__div--experiens {

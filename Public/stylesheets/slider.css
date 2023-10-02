@@ -14,8 +14,17 @@
     align-items: center;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal{
+.slider-experiens .swiper-slide{
+    max-height: 210px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 44px;
+}
+
+.Swiper-experiens .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 20px;
+    height: unset !important;
 }
 
 .swiper-button-prev {
@@ -23,18 +32,18 @@
     opacity: 0;
     color: white;
     width: 48px;
-    left: 16px;
+    left: 0;
 }
 
-.swiper-button-next{
+.swiper-button-next {
     top: 124px;
     opacity: 0;
     color: white;
     width: 48px;
-    right: 16px;
+    right: 0;
 }
 
-.swiper-button-prev:after{
+.swiper-button-prev:after {
     font-size: 32px;
     background-color: black;
     width: 35px;
@@ -45,7 +54,7 @@
     justify-content: space-evenly;
 }
 
-.swiper-button-next:after{
+.swiper-button-next:after {
     font-size: 32px;
     background-color: black;
     width: 35px;
@@ -56,7 +65,10 @@
     justify-content: space-evenly;
 }
 
-.section--containercetification:hover .swiper-button-next,.section--containercetification:hover .swiper-button-prev {
+.section--containercetification:hover .swiper-button-next,
+.section--containercetification:hover .swiper-button-prev,
+.section--experiens:hover .swiper-button-next,
+.section--experiens:hover .swiper-button-prev {
     opacity: 1;
 }
 
