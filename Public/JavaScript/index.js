@@ -101,13 +101,11 @@ function plantillaExperiencia(datos) {
 }
 
 function plantillaCertificado(datos) {
-    let template = `   
-    <h2 class="section--certificado-titulo">Certificados</h2>
-    <div class="section--containercetification">`;
+    let template = "";
 
-    datos.forEach((dato, i) => {
-        if (i === 0) {
+    datos.forEach((dato) => {
             template += `
+            <div class="swiper-slide">
             <article class="section__article--certificado">
                 <div class="section__article__div-imgconteiner">
                     <img class="section__article-img" src="${dato.img}" class="card-img-top"
@@ -117,48 +115,33 @@ function plantillaCertificado(datos) {
                     <p class="section__article__div-titulo">${dato.titulo}</p>
                     <small class="section__article__div-fecha">${dato.fecha}</small>
                 </div>
-            </article>`;
-        } else {
-            template += `
-            <article class="section__article--certificado2">
-                <div class="section__article__div-imgconteiner">
-                    <img class="section__article-img" src="${dato.img}" class="card-img-top"
-                                alt="Diploma">
-                </div>
-                <div class="div-conteiner">
-                    <p class="section__article__div-titulo">${dato.titulo}</p>
-                    <small class="section__article__div-fecha">${dato.fecha}</small>
-                </div>
-            </article>`;
-        }
+            </article>
+            </div>`;
     });
-
-    template += `
-    </div>`;
 
     return template;
 }
 
-cargarYMostrarDatos(
-    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/perfil",
-    ".header",
-    plantillaPerfil
-);
-
-cargarYMostrarDatos(
-    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/skills",
-    ".section--skills",
-    plantillaSkill
-);
-
-cargarYMostrarDatos(
-    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
-    ".swiper-wrapper",
-    plantillaExperiencia
-);
-
-cargarYMostrarDatos(
-    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/certificado",
-    ".section--certificado",
-    plantillaCertificado
-);
+    cargarYMostrarDatos(
+        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/perfil",
+        ".header",
+        plantillaPerfil
+    );
+    
+    cargarYMostrarDatos(
+        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/skills",
+        ".section--skills",
+        plantillaSkill
+    );
+    
+    cargarYMostrarDatos(
+        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
+        ".",
+        plantillaExperiencia
+    );
+    
+    cargarYMostrarDatos(
+        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/certificado",
+        ".swiper-wrapper",
+        plantillaCertificado
+    );
