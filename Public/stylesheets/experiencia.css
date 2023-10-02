@@ -75,7 +75,6 @@
     color: var(--GrisColor);
 }
 
-
 @media (min-width:1200px) {
     .section--experiens{
         padding: 16px;

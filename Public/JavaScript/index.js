@@ -48,25 +48,25 @@ function plantillaSkill(datos) {
     <article class="section__article--skills-container">
         <div class="section__article__div--skills-container1">`;
 
-    for (let i = 0; i <= 1; i++) {
+    datos.slice(0, 2).forEach((dato) => {
         template += `
             <div class="section__article__div--html">
-                <label class="section__article__div--html--subhtml">${datos[i].titulo}</label>
-                <progress class="section__article__div--html--progress" max="100" value="${datos[i].Progreso}">${datos[i].Progreso}</progress>
+                <label class="section__article__div--html--subhtml">${dato.titulo}</label>
+                <progress class="section__article__div--html--progress" max="100" value="${dato.Progreso}">${dato.Progreso}</progress>
             </div>`;
-    }
+    });
 
     template += `
         </div>
         <div class="section__article__div--skills-container2">`;
 
-    for (let i = 2; i <= 3; i++) {
+    datos.slice(2, 4).forEach((dato) => {
         template += `
             <div class="section__article__div--js">
-                <label class="section__article__div--html--subhtml">${datos[i].titulo}</label>
-                <progress class="section__article__div--html--progress" max="100" value="${datos[i].Progreso}">${datos[i].Progreso}</progress>
+                <label class="section__article__div--html--subhtml">${dato.titulo}</label>
+                <progress class="section__article__div--html--progress" max="100" value="${dato.Progreso}">${dato.Progreso}</progress>
             </div>`;
-    }
+    });
 
     template += `
         </div>
@@ -75,42 +75,27 @@ function plantillaSkill(datos) {
     return template;
 }
 
+
 function plantillaExperiencia(datos) {
-    let template = `   
-    <h2 class="section--experiens-titulo">Experiencia</h2>`;
+    let template = "";
 
-    for (let i = 0; i < datos.length; i++) {
-
-        if (i === 0) {
-            template += `
-        <article class="section__article--experiens">    
-            <div class="section__article__div--experiens">
-                <img class="section__article__div--experiens-img" src="${datos[i].img}" alt="Img Experiencia">
-                <span class="section__article__div--experiens-textcontainer">
-                    <p class="section__article__div--experiens-fecha">${datos[i].fecha}</p>
-                    <p class="section__article__div--experiens-name">${datos[i].titulo}</p>
-                </span>
-            </div>
-            <div class="section__article--description">
-                <p class="section__article--description-texto">${datos[i].descripcion}</p>
-            </div>
-        </article>`;
-        } else {
-            template += `
-        <article class="section__article--experiens2">    
-            <div class="section__article__div--experiens">
-                <img class="section__article__div--experiens-img" src="${datos[i].img}" alt="Img Experiencia">
-                <span class="section__article__div--experiens-textcontainer">
-                    <p class="section__article__div--experiens-fecha">${datos[i].fecha}</p>
-                    <p class="section__article__div--experiens-name">${datos[i].titulo}</p>
-                </span>
-            </div>
-            <div class="section__article--description">
-                <p class="section__article--description-texto">${datos[i].descripcion}</p>
-            </div>
-            </article>`;
-        }
-    }
+    datos.forEach((dato) => {
+        template += `
+        <div class="swiper-slide">
+            <article class="section__article--experiens">    
+                <div class="section__article__div--experiens">
+                    <img class="section__article__div--experiens-img" src="${dato.img}" alt="Img Experiencia">
+                    <span class="section__article__div--experiens-textcontainer">
+                        <p class="section__article__div--experiens-fecha">${dato.fecha}</p>
+                        <p class="section__article__div--experiens-name">${dato.titulo}</p>
+                    </span>
+                </div>
+                <div class="section__article--description">
+                    <p class="section__article--description-texto">${dato.descripcion}</p>
+                </div>
+            </article>
+        </div>`;
+    });
 
     return template;
 }
@@ -120,41 +105,39 @@ function plantillaCertificado(datos) {
     <h2 class="section--certificado-titulo">Certificados</h2>
     <div class="section--containercetification">`;
 
-    for (let i = 0; i < datos.length; i++) {
-        
-        if (i === 0){
-        template += `
-        <article class="section__article--certificado">
-            <div class="section__article__div-imgconteiner">
-                <img class="section__article-img" src="${datos[i].img}" class="card-img-top"
-                            alt="Diploma">
-            </div>
-            <div class="div-conteiner">
-                <p class="section__article__div-titulo">${datos[i].titulo}</p>
-                <small class="section__article__div-fecha">${datos[i].fecha}</small>
-            </div>
-        </article>`;
+    datos.forEach((dato, i) => {
+        if (i === 0) {
+            template += `
+            <article class="section__article--certificado">
+                <div class="section__article__div-imgconteiner">
+                    <img class="section__article-img" src="${dato.img}" class="card-img-top"
+                                alt="Diploma">
+                </div>
+                <div class="div-conteiner">
+                    <p class="section__article__div-titulo">${dato.titulo}</p>
+                    <small class="section__article__div-fecha">${dato.fecha}</small>
+                </div>
+            </article>`;
         } else {
             template += `
             <article class="section__article--certificado2">
                 <div class="section__article__div-imgconteiner">
-                    <img class="section__article-img" src="${datos[i].img}" class="card-img-top"
+                    <img class="section__article-img" src="${dato.img}" class="card-img-top"
                                 alt="Diploma">
                 </div>
                 <div class="div-conteiner">
-                    <p class="section__article__div-titulo">${datos[i].titulo}</p>
-                    <small class="section__article__div-fecha">${datos[i].fecha}</small>
+                    <p class="section__article__div-titulo">${dato.titulo}</p>
+                    <small class="section__article__div-fecha">${dato.fecha}</small>
                 </div>
             </article>`;
         }
-    }
+    });
 
     template += `
     </div>`;
 
     return template;
 }
-
 
 cargarYMostrarDatos(
     "https://my-json-server.typicode.com/Luchito30/Api-digitalers/perfil",
@@ -170,7 +153,7 @@ cargarYMostrarDatos(
 
 cargarYMostrarDatos(
     "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
-    ".section--experiens",
+    ".swiper-wrapper",
     plantillaExperiencia
 );
 
