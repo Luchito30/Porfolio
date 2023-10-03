@@ -75,6 +75,74 @@ function plantillaSkill(datos) {
     return template;
 }
 
+function plantillaCard(datos) {
+    let template = "";
+
+  if (datos.React && datos.React.length > 0) {
+    
+    datos.React.forEach((dato) => {
+        template += `
+        <section class="section--card">
+        <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+        <article class="section__article--container">
+            <div class="section__article--card-conteinertitulo">
+                <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+            </div>
+            <p class="section__article--card-text">${dato.descripcion}</p>
+            <div class="section__article--card-botons">
+                <a class="section__article--card-demo" href="#">Demo</a>
+                <button class="section__article--card-code" type="button">Code</button>
+            </div>
+        </article>
+        </section>`;
+    });
+}
+
+if (datos.responsive && datos.responsive.length > 0) {
+    
+    datos.responsive.forEach((dato) => {
+        template += `
+        <section class="section--card">
+        <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+        <article class="section__article--container">
+            <div class="section__article--card-conteinertitulo">
+                <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+            </div>
+            <p class="section__article--card-text">${dato.descripcion}</p>
+            <div class="section__article--card-botons">
+                <a class="section__article--card-demo" href="#">Demo</a>
+                <button class="section__article--card-code" type="button">Code</button>
+            </div>
+        </article>
+        </section>`;
+    });
+}
+
+if (datos.javascript && datos.javascript.length > 0) {
+    
+    datos.javascript.forEach((dato) => {
+        template += `
+        <section class="section--card">
+        <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+        <article class="section__article--container">
+            <div class="section__article--card-conteinertitulo">
+                <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+            </div>
+            <p class="section__article--card-text">${dato.descripcion}</p>
+            <div class="section__article--card-botons">
+                <a class="section__article--card-demo" href="#">Demo</a>
+                <button class="section__article--card-code" type="button">Code</button>
+            </div>
+        </article>
+        </section>`;
+    });
+}
+
+return template;
+}
 
 function plantillaExperiencia(datos) {
     let template = "";
@@ -134,6 +202,12 @@ function plantillaCertificado(datos) {
         ".section--skills",
         plantillaSkill
     );
+
+    cargarYMostrarDatos(
+        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
+        ".card--container",
+        plantillaCard
+    );
     
     cargarYMostrarDatos(
         "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
@@ -146,3 +220,12 @@ function plantillaCertificado(datos) {
         ".slider-certi",
         plantillaCertificado
     );
+
+    fetch(" https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto")
+.then(respuesta =>{
+    return respuesta.json();
+})
+.then(dato =>{
+    console.log(dato)
+})
+

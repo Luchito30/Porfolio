@@ -14,17 +14,10 @@
     color: var(--GrisOscuro);
 }
 
-.section__article--certificado,
-.section__article--certificado2,
-.section__article--certificado3 {
+.section__article--certificado {
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
-
-.section__article--certificado2,
-.section__article--certificado3{
-    display: none;
 }
 
 .section__article__div-imgconteiner {
@@ -75,9 +68,7 @@ gap: 6px;
         padding: 0px 85px;
     }
 
-    .section__article--certificado,
-    .section__article--certificado2,
-    .section__article--certificado3 {
+    .section__article--certificado {
         display: flex;
         flex-direction: column;
         padding: 16px;
