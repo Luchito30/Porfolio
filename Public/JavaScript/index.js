@@ -1,3 +1,4 @@
+// Funcion para usar la api, si es ok toma los datos en json e pone en el html el tamplete
 async function cargarYMostrarDatos(url, selector, template) {
     try {
         const respuesta = await fetch(url);
@@ -16,6 +17,7 @@ async function cargarYMostrarDatos(url, selector, template) {
     }
 }
 
+// callback para perfil 
 function plantillaPerfil(datos) {
     return ` 
     <section class="header__section--img">
@@ -42,6 +44,7 @@ function plantillaPerfil(datos) {
 </section>`;
 }
 
+// callback para skill
 function plantillaSkill(datos) {
     let template = `
     <h2 class="section--skills-titulo">Skills</h2>
@@ -75,13 +78,21 @@ function plantillaSkill(datos) {
     return template;
 }
 
+// toma el boton de responsive y agrega la class mostrar
+const botonResponsive = document.querySelector(".section__article__button-resp");
+botonResponsive.classList.add("mostrar");
+
+// callback para card y que muestre responsive a penas carga
 function plantillaCard(datos) {
     let template = "";
 
-  if (datos.React && datos.React.length > 0) {
-    
-    datos.React.forEach((dato) => {
-        template += `
+    if (datos.responsive && datos.responsive.length > 0) {
+
+        const contador = document.querySelector(".section--proyect-titulo")
+        contador.innerHTML = `Proyecto(${datos.responsive.length})`
+
+        datos.responsive.forEach((dato) => {
+            template += `
         <section class="section--card">
         <img class="section--card-img" src="${dato.img}" alt="Proyecto">
         <article class="section__article--container">
@@ -96,54 +107,157 @@ function plantillaCard(datos) {
             </div>
         </article>
         </section>`;
-    });
+        });
+    }
+    return template;
+
 }
 
-if (datos.responsive && datos.responsive.length > 0) {
-    
-    datos.responsive.forEach((dato) => {
-        template += `
-        <section class="section--card">
-        <img class="section--card-img" src="${dato.img}" alt="Proyecto">
-        <article class="section__article--container">
-            <div class="section__article--card-conteinertitulo">
-                <small class="section__article--card-hastag">${dato.etiqueta}</small>
-                <h5 class="section__article--card-titulo">${dato.titulo}</h5>
-            </div>
-            <p class="section__article--card-text">${dato.descripcion}</p>
-            <div class="section__article--card-botons">
-                <a class="section__article--card-demo" href="#">Demo</a>
-                <button class="section__article--card-code" type="button">Code</button>
-            </div>
-        </article>
-        </section>`;
-    });
-}
+// evento click para los botones y aparescan los template segun el boton
+const botones = document.querySelector(".section__article-bootoms")
+botones.addEventListener("click", (e) => {
 
-if (datos.javascript && datos.javascript.length > 0) {
-    
-    datos.javascript.forEach((dato) => {
-        template += `
-        <section class="section--card">
-        <img class="section--card-img" src="${dato.img}" alt="Proyecto">
-        <article class="section__article--container">
-            <div class="section__article--card-conteinertitulo">
-                <small class="section__article--card-hastag">${dato.etiqueta}</small>
-                <h5 class="section__article--card-titulo">${dato.titulo}</h5>
-            </div>
-            <p class="section__article--card-text">${dato.descripcion}</p>
-            <div class="section__article--card-botons">
-                <a class="section__article--card-demo" href="#">Demo</a>
-                <button class="section__article--card-code" type="button">Code</button>
-            </div>
-        </article>
-        </section>`;
-    });
-}
+    const botonReact = document.querySelector(".section__article__button-react");
+    const botonResponsive = document.querySelector(".section__article__button-resp");
+    const botonJavaScript = document.querySelector(".section__article__button-js")
 
-return template;
-}
+    if (e.target === botonReact) {
 
+        const loader = document.querySelector(".card--container");
+        loader.innerHTML = `<div class="loader"></div>`
+
+        botonResponsive.classList.remove("mostrar");
+        botonJavaScript.classList.remove("mostrar");
+        botonReact.classList.add("mostrar");
+
+        function plantillaCard(datos) {
+            
+            let template = "";
+
+            if (datos.React && datos.React.length > 0) {
+
+                const contador = document.querySelector(".section--proyect-titulo")
+                contador.innerHTML = `Proyecto(${datos.React.length})`
+
+                datos.React.forEach((dato) => {
+                    template += `
+                <section class="section--card">
+                <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+                <article class="section__article--container">
+                    <div class="section__article--card-conteinertitulo">
+                        <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                        <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+                    </div>
+                    <p class="section__article--card-text">${dato.descripcion}</p>
+                    <div class="section__article--card-botons">
+                        <a class="section__article--card-demo" href="#">Demo</a>
+                        <button class="section__article--card-code" type="button">Code</button>
+                    </div>
+                </article>
+                </section>`;
+                });
+            }
+            return template;
+
+        }
+        cargarYMostrarDatos(
+            "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
+            ".card--container",
+            plantillaCard
+        );
+
+    } else if (e.target === botonResponsive) {
+
+        const loader = document.querySelector(".card--container");
+        loader.innerHTML = `<div class="loader"></div>`
+
+        botonJavaScript.classList.remove("mostrar");
+        botonReact.classList.remove("mostrar");
+        botonResponsive.classList.add("mostrar");
+
+        function plantillaCard(datos) {
+            let template = "";
+
+            if (datos.responsive && datos.responsive.length > 0) {
+
+                const contador = document.querySelector(".section--proyect-titulo")
+                contador.innerHTML = `Proyecto(${datos.responsive.length})`
+
+                datos.responsive.forEach((dato) => {
+                    template += `
+                <section class="section--card">
+                <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+                <article class="section__article--container">
+                    <div class="section__article--card-conteinertitulo">
+                        <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                        <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+                    </div>
+                    <p class="section__article--card-text">${dato.descripcion}</p>
+                    <div class="section__article--card-botons">
+                        <a class="section__article--card-demo" href="#">Demo</a>
+                        <button class="section__article--card-code" type="button">Code</button>
+                    </div>
+                </article>
+                </section>`;
+                });
+            }
+            return template;
+
+        }
+        cargarYMostrarDatos(
+            "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
+            ".card--container",
+            plantillaCard
+        );
+
+    } else if (e.target === botonJavaScript) {
+
+        
+        const loader = document.querySelector(".card--container");
+        loader.innerHTML = `<div class="loader"></div>`
+        
+        botonReact.classList.remove("mostrar");
+        botonResponsive.classList.remove("mostrar");
+        botonJavaScript.classList.add("mostrar");
+
+        function plantillaCard(datos) {
+            let template = "";
+            if (datos.javascript && datos.javascript.length > 0) {
+            
+                const contador = document.querySelector(".section--proyect-titulo")
+                contador.innerHTML = `Proyecto(${datos.javascript.length})`
+
+                datos.javascript.forEach((dato) => {
+                    template += `
+                    <section class="section--card">
+                    <img class="section--card-img" src="${dato.img}" alt="Proyecto">
+                    <article class="section__article--container">
+                        <div class="section__article--card-conteinertitulo">
+                            <small class="section__article--card-hastag">${dato.etiqueta}</small>
+                            <h5 class="section__article--card-titulo">${dato.titulo}</h5>
+                        </div>
+                        <p class="section__article--card-text">${dato.descripcion}</p>
+                        <div class="section__article--card-botons">
+                            <a class="section__article--card-demo" href="#">Demo</a>
+                            <button class="section__article--card-code" type="button">Code</button>
+                        </div>
+                    </article>
+                    </section>`;
+                });
+            }
+
+            return template;
+
+        }
+        cargarYMostrarDatos(
+            "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
+            ".card--container",
+            plantillaCard
+        );
+    }
+});
+
+// callback para experiencia
 function plantillaExperiencia(datos) {
     let template = "";
 
@@ -169,11 +283,12 @@ function plantillaExperiencia(datos) {
     return template;
 }
 
+// callback para certificados
 function plantillaCertificado(datos) {
     let template = "";
 
     datos.forEach((dato) => {
-            template += `
+        template += `
             <div class="swiper-slide">
             <article class="section__article--certificado">
                 <div class="section__article__div-imgconteiner">
@@ -191,41 +306,36 @@ function plantillaCertificado(datos) {
     return template;
 }
 
-    cargarYMostrarDatos(
-        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/perfil",
-        ".header",
-        plantillaPerfil
-    );
-    
-    cargarYMostrarDatos(
-        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/skills",
-        ".section--skills",
-        plantillaSkill
-    );
 
-    cargarYMostrarDatos(
-        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
-        ".card--container",
-        plantillaCard
-    );
-    
-    cargarYMostrarDatos(
-        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
-        ".slider-experiens",
-        plantillaExperiencia
-    );
-    
-    cargarYMostrarDatos(
-        "https://my-json-server.typicode.com/Luchito30/Api-digitalers/certificado",
-        ".slider-certi",
-        plantillaCertificado
-    );
+// llama a las funciones con los parametros 
+cargarYMostrarDatos(
+    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/perfil",
+    ".header",
+    plantillaPerfil
+);
 
-    fetch(" https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto")
-.then(respuesta =>{
-    return respuesta.json();
-})
-.then(dato =>{
-    console.log(dato)
-})
+cargarYMostrarDatos(
+    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/skills",
+    ".section--skills",
+    plantillaSkill
+);
+
+cargarYMostrarDatos(
+    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
+    ".card--container",
+    plantillaCard
+);
+
+cargarYMostrarDatos(
+    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/experiencia",
+    ".slider-experiens",
+    plantillaExperiencia
+);
+
+cargarYMostrarDatos(
+    "https://my-json-server.typicode.com/Luchito30/Api-digitalers/certificado",
+    ".slider-certi",
+    plantillaCertificado
+);
+
 

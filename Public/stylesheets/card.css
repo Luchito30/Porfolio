@@ -6,7 +6,8 @@
     height: 615px;
     display: flex;
     align-items: flex-start;
-
+    scrollbar-color: var(--CelesteColor) var(--GrisClaro);
+    scrollbar-width: auto;
 }
 
 .section--card{
@@ -91,6 +92,7 @@
 
 .card--container::-webkit-scrollbar{
     width: 10px;
+    height: 10px;
     background-color: var(--GrisClaro);
     border-radius: 20px;
 }
