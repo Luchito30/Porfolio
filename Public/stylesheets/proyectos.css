@@ -46,6 +46,7 @@
     background-color: darkgray;
     color: white;
     transform: scale(1.1);
+    border:none
 }
 
 .mostrar {
