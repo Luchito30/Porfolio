@@ -58,6 +58,7 @@
 .mostrar:hover{
     background-color: cadetblue;
     transform: scale(1.1);
+    border: none;
 }
 
 @media (min-width:1200px) {
