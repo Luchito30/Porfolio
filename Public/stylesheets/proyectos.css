@@ -40,10 +40,23 @@
     background-color: #fff;
 }
 
+.section__article__button-resp:hover,
+.section__article__button-js:hover,
+.section__article__button-react:hover{
+    background-color: darkgray;
+    color: white;
+    transform: scale(1.1);
+}
+
 .mostrar {
     background-color: var(--CelesteColor);
     color: #fff;
     border: 0px;
+}
+
+.mostrar:hover{
+    background-color: cadetblue;
+    transform: scale(1.1);
 }
 
 @media (min-width:1200px) {

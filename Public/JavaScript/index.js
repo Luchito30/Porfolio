@@ -83,7 +83,7 @@ const botonResponsive = document.querySelector(".section__article__button-resp")
 botonResponsive.classList.add("mostrar");
 
 // callback para card y que muestre responsive a penas carga
-function plantillaCard(datos) {
+function plantillaCardResponsive(datos) {
     let template = "";
 
     if (datos.responsive && datos.responsive.length > 0) {
@@ -175,39 +175,10 @@ botones.addEventListener("click", (e) => {
         botonReact.classList.remove("mostrar");
         botonResponsive.classList.add("mostrar");
 
-        function plantillaCard(datos) {
-            let template = "";
-
-            if (datos.responsive && datos.responsive.length > 0) {
-
-                const contador = document.querySelector(".section--proyect-titulo")
-                contador.innerHTML = `Proyecto(${datos.responsive.length})`
-
-                datos.responsive.forEach((dato) => {
-                    template += `
-                <section class="section--card">
-                <img class="section--card-img" src="${dato.img}" alt="Proyecto">
-                <article class="section__article--container">
-                    <div class="section__article--card-conteinertitulo">
-                        <small class="section__article--card-hastag">${dato.etiqueta}</small>
-                        <h5 class="section__article--card-titulo">${dato.titulo}</h5>
-                    </div>
-                    <p class="section__article--card-text">${dato.descripcion}</p>
-                    <div class="section__article--card-botons">
-                        <a class="section__article--card-demo" href="#">Demo</a>
-                        <button class="section__article--card-code" type="button">Code</button>
-                    </div>
-                </article>
-                </section>`;
-                });
-            }
-            return template;
-
-        }
         cargarYMostrarDatos(
             "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
             ".card--container",
-            plantillaCard
+            plantillaCardResponsive
         );
 
     } else if (e.target === botonJavaScript) {
@@ -323,7 +294,7 @@ cargarYMostrarDatos(
 cargarYMostrarDatos(
     "https://my-json-server.typicode.com/Luchito30/Api-digitalers/proyecto",
     ".card--container",
-    plantillaCard
+    plantillaCardResponsive
 );
 
 cargarYMostrarDatos(
